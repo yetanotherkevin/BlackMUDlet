@@ -3,7 +3,15 @@
 <MudletPackage version="1.001">
 	<TriggerPackage />
 	<TimerPackage />
-	<AliasPackage />
+	<AliasPackage>
+		<Alias isActive="yes" isFolder="no">
+			<name>Item DB Lookup</name>
+			<script>itemLookup(matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/item (.+)$</regex>
+		</Alias>
+	</AliasPackage>
 	<ActionPackage />
 	<ScriptPackage>
 		<Script isActive="yes" isFolder="no">
@@ -17,7 +25,7 @@ function itemLookup(target, maxMatches)
   local file = io.open(path)
   
   if file == nil then 
-    cecho("\n\n&lt;DarkRed:&gt;Error: Unable to open "..path)
+    cecho("\n\n&lt;firebrick:&gt;Error: Unable to open "..path)
     return
   end
   
