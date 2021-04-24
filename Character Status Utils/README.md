@@ -1,5 +1,5 @@
 ## Installation
-Download .xml and drag/drop directly onto Mudlet main window, or drag [this link](https://github.com/yetanotherkevin/BlackMUDlet/raw/main/Forage%20Utils/Forage%20Utils.xml) directly.
+Download .xml and drag/drop directly onto Mudlet main window, or drag [this link](https://github.com/yetanotherkevin/BlackMUDlet/raw/main/Character%20Status%20Utils/Character%20Status%20Utils.xml) directly.
 
 ## Character Status Utils
 A set of triggers to scrape and store character status for use in other triggers and scripts.
