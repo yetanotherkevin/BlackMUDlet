@@ -105,6 +105,26 @@ raiseEvent("newTickEvent")</script>
 				<integer>3</integer>
 			</regexCodePropertyList>
 		</Trigger>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Show Tick Timer on Prompt</name>
+			<script>cecho("&lt;LightBlue:&gt;("..math.floor(remainingTime("TickTimer"))..")")</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^&lt; (\d+) (\d+) ?(\d+)? &gt;$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
 	</TriggerPackage>
 	<TimerPackage>
 		<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
@@ -127,7 +147,7 @@ local tickWarningTimerId  -- used to prevent duplicate warnings
 
 
 -- Code here will execute at the tick warning
-local function onTickWarning()
+function onTickWarning()
 
   cecho("&lt;LightBlue:&gt;                                                                      "..tickWarning.." SECONDS UNTIL TICK\n")
 
@@ -154,7 +174,7 @@ registerAnonymousEventHandler("newTickEvent", "onNewTick")</script>
 		</Script>
 	</ScriptPackage>
 	<KeyPackage />
-	<VariablePackage>
-		<HiddenVariables />
-	</VariablePackage>
+	<HelpPackage>
+		<helpURL></helpURL>
+	</HelpPackage>
 </MudletPackage>

@@ -176,8 +176,13 @@ characterStatus["gold"] = matches[3]</script>
 		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 			<name>Prompt Current HP/MP/MV Trigger</name>
 			<script>characterStatus["current hp"] = matches[2]
-characterStatus["current mana"] = matches[3]
-characterStatus["current move"] = matches[4]</script>
+
+if matches[4] then -- hp mp mv
+  characterStatus["current mana"] = matches[3]
+  characterStatus["current move"] = matches[4]
+else -- hp mv
+  characterStatus["current move"] = matches[3]
+end</script>
 			<triggerType>0</triggerType>
 			<conditonLineDelta>0</conditonLineDelta>
 			<mStayOpen>0</mStayOpen>
@@ -189,7 +194,7 @@ characterStatus["current move"] = matches[4]</script>
 			<colorTriggerFgColor>#000000</colorTriggerFgColor>
 			<colorTriggerBgColor>#000000</colorTriggerBgColor>
 			<regexCodeList>
-				<string>^&lt; (\d+) (\d+) (\d+) &gt;</string>
+				<string>^&lt; (\d+) (\d+) ?(\d+)? &gt;$</string>
 			</regexCodeList>
 			<regexCodePropertyList>
 				<integer>1</integer>
@@ -373,7 +378,7 @@ cecho(" You now have "..playerInfo["gold"].." gold coins.\n")</script>
 		</Script>
 	</ScriptPackage>
 	<KeyPackage />
-	<VariablePackage>
-		<HiddenVariables />
-	</VariablePackage>
+	<HelpPackage>
+		<helpURL></helpURL>
+	</HelpPackage>
 </MudletPackage>
