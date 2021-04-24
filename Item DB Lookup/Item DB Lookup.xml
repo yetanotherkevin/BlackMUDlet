@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage />
+	<TimerPackage />
+	<AliasPackage>
+		<Alias isActive="yes" isFolder="no">
+			<name>Item Lookup</name>
+			<script>itemLookup(matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/item (.+)$</regex>
+		</Alias>
+	</AliasPackage>
+	<ActionPackage />
+	<ScriptPackage>
+		<Script isActive="yes" isFolder="no">
+			<name>Item DB Lookup</name>
+			<packageName></packageName>
+			<script>
+function itemLookup(target, maxMatches)
+
+  local path = getMudletHomeDir().."/Item DB Lookup/itemdb.txt"
+
+  local file = io.open(path)
+  
+  if file == nil then 
+    cecho("\n\n&lt;DarkRed:&gt;Error: Unable to open "..path)
+    return
+  end
+  
+  local contents = file:read("*all")
+  local count = 0
+  
+  maxMatches = maxMatches or 100
+
+  -- strip carriage returns if present
+  contents = string.gsub(contents, "\r\n", "\n")
+  
+  -- Find first character after blank line
+  local itemStart = string.find(contents, "\n\n") + 2
+    
+  while itemStart &lt; string.len(contents) do
+  
+    local itemEnd = string.find(contents, "\n\n", itemStart + 1)
+    local item = string.sub(contents, itemStart, itemEnd)
+         
+    -- case-insensitive compare
+    if string.find(item:upper(), target:upper()) then
+        count = count + 1
+        cecho("\n&lt;LightBlue:&gt;"..item)
+    end
+    
+    itemStart = itemEnd + 2
+    
+    if(count == maxMatches) then 
+      cecho("\n&lt;LightBlue:&gt;Max matches reached.")
+      break
+    end
+  
+  end
+  
+  cecho("\n&lt;LightBlue:&gt;"..count.." items found matching \""..target.."\".\n\n")
+
+end</script>
+			<eventHandlerList />
+		</Script>
+	</ScriptPackage>
+	<KeyPackage />
+	<VariablePackage>
+		<HiddenVariables />
+	</VariablePackage>
+</MudletPackage>

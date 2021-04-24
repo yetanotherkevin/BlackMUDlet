@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>New Tick (Time of Day)</name>
+			<script>raiseEvent("newTickEvent")</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>The sun begins to rise from the eastern horizon.</string>
+				<string>The day has begun.</string>
+				<string>The sun slowly disappears on the western horizon.</string>
+				<string>Night settles upon the world.</string>
+				<string>The new moon slowly rises from the northern horizon.</string>
+				<string>The waxing moon slowly rises from the northern horizon.</string>
+				<string>The waning moon slowly rises from the northern horizon.</string>
+				<string>The full moon slowly rises from the northern horizon.</string>
+				<string>The moon sets.</string>
+				<string>Darkness engulfs the world as the moon sets.</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+			</regexCodePropertyList>
+		</Trigger>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>New Tick (Hunger / Thirst)</name>
+			<script>-- Note: "You are hungry." and "You are thirsty." may show up when you type "score"
+--       This will incorrectly reset your tick timer.
+
+raiseEvent("newTickEvent")</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>You are hungry.</string>
+				<string>You are thirsty.</string>
+				<string>You are now sober.</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+			</regexCodePropertyList>
+		</Trigger>
+		<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>New Tick (Weather)</name>
+			<script>raiseEvent("newTickEvent")</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>The sky begins to blacken.</string>
+				<string>It starts to rain black mud.</string>
+				<string>Black lightning crackles across the sky.</string>
+				<string>The lightning has gone, but it is still raining.</string>
+				<string>The rainstorm slowly dies down.</string>
+				<string>The clouds disappear.</string>
+				<string>It starts to snow.</string>
+				<string>You are caught in a blizzard.</string>
+				<string>The blizzard is over, but it is still snowing.</string>
+				<string>The snow has stopped.</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+	<TimerPackage>
+		<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+			<name>TickTimer</name>
+			<script>raiseEvent("newTickEvent")</script>
+			<command></command>
+			<packageName></packageName>
+			<time>00:01:00.000</time>
+		</Timer>
+	</TimerPackage>
+	<AliasPackage />
+	<ActionPackage />
+	<ScriptPackage>
+		<Script isActive="yes" isFolder="no">
+			<name>Tick Timer</name>
+			<packageName></packageName>
+			<script>
+local tickWarning = 5     -- warning length in seconds
+local tickWarningTimerId  -- used to prevent duplicate warnings
+
+
+-- Code here will execute at the tick warning
+local function onTickWarning()
+
+  cecho("&lt;LightBlue:&gt;                                                                      "..tickWarning.." SECONDS UNTIL TICK\n")
+
+end
+
+
+-- Code here will execute on each tick
+--  1. Reset the global tick timer
+--  2. set a temp timer to call onTickWarning
+function onNewTick(...)
+
+  -- reset the global tick timer
+  disableTimer("TickTimer")
+  enableTimer("TickTimer")
+  
+  -- kill the tick warning if it already exists and create a new warning timer
+  if tickWarningTimerId then killTimer(tickWarningTimerId) end
+  tickWarningTimerId = tempTimer(60 - tickWarning, [[ onTickWarning() ]])
+ 
+end
+
+registerAnonymousEventHandler("newTickEvent", "onNewTick")</script>
+			<eventHandlerList />
+		</Script>
+	</ScriptPackage>
+	<KeyPackage />
+	<VariablePackage>
+		<HiddenVariables />
+	</VariablePackage>
+</MudletPackage>

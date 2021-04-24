@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Forage Invalid</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>Can't really forage for food...here.</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>3</integer>
+			</regexCodePropertyList>
+		</Trigger>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Forage Begin</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>You begin to forage the area for food.</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>3</integer>
+			</regexCodePropertyList>
+		</Trigger>
+		<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Forage Continues</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>You continue searching, but have not found anything as of yet.</string>
+				<string>You see a patch of flowers and walk over to them, only to find they are dried up and dead.</string>
+				<string>You see some fruit up in a tree and try to shake it down, but it slams into the ground rotten.</string>
+				<string>You grab hold of an old root sticking out of the ground, but it falls apart in your hand.</string>
+				<string>You spot a promising looking bush but find no ripe berries in sight.</string>
+				<string>You spot a hollow log and look inside to inspect...you found nothing but rotted pulp.</string>
+				<string>You find a patch of lichen, but determine it to be unedible by its looks.</string>
+				<string>You find a nutshell and crack it open only to find it empty inside.</string>
+				<string>You come across a patch of berries but find them to be rotten and full of worm holes.</string>
+				<string>You search through some bushes looking for berries but find none.</string>
+				<string>You spot a small mushroom sprouting up nearby, but on closer inspection you find it to be a slimy toadstool.</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+				<integer>3</integer>
+			</regexCodePropertyList>
+		</Trigger>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Forage Interrupted</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ffff00</mFgColor>
+			<mBgColor>transparent</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>You stop foraging.</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>3</integer>
+			</regexCodePropertyList>
+		</Trigger>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Forage Success</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#00aa00</mFgColor>
+			<mBgColor>transparent</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^You manage to find .+.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Forage Fail</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#aa0000</mFgColor>
+			<mBgColor>transparent</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>You didn't manage to find anything edible.</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>3</integer>
+			</regexCodePropertyList>
+		</Trigger>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Forage Complete</name>
+			<script>-- Triggered on both success or fail, but not interruption
+-- Good place for auto food, drink, buff, etc. and re-forage.
+
+if playerInfo["thirsty"] then
+  send("drink water")
+  send("drink water")
+  send("cast 'create water' skin")
+end
+
+-- goodberry pops direct to inventory, so better than mushrooms while foraging
+if playerInfo["hungry"] then
+  send("cast 'goodberry'")
+  send("eat berry")
+end
+
+send("forage")</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>You didn't manage to find anything edible.</string>
+				<string>^You manage to find .+.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>3</integer>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Forage Learn</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#00aa00</mFgColor>
+			<mBgColor>transparent</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>You think you learned a little about how to forage.</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>3</integer>
+			</regexCodePropertyList>
+		</Trigger>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Forage Room Quality</name>
+			<script>-- possible matches are terrible, poor, average, good, and great
+
+if matches[2] == "terrible" then
+  setRoomChar(getPlayerRoom(), "🥜")
+elseif matches[2] == "poor" then
+  setRoomChar(getPlayerRoom(), "🧅")
+elseif matches[2] == "average" then
+  setRoomChar(getPlayerRoom(), "🥕")
+elseif matches[2] == "good" then
+  setRoomChar(getPlayerRoom(), "🍐")
+elseif matches[2] == "great" then 
+  setRoomChar(getPlayerRoom(), "🍑")
+end
+
+setRoomUserData(getPlayerRoom(), "forageQuality", matches[2])
+</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff55ff</mFgColor>
+			<mBgColor>transparent</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^This seems like an? (\w+) place to forage.$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>Auto ID Foraged Food</name>
+			<script>
+local effects = "(";
+
+-- for each food trait detected
+for token in string.gmatch(matches.traits, "%w+") do
+    if effects ~= "(" then 
+        effects = effects..", "
+    end
+    -- reject threshold
+    if foodRating[token] &lt; -1 then effects = effects.."&lt;red:&gt;"..foodEffects[token]
+    
+    -- warning threshold
+    elseif foodRating[token] &lt; 0 then effects = effects.."&lt;LightGoldenrod:&gt;"..foodEffects[token]
+    
+    -- positive threshold
+    elseif foodRating[token] &gt; 1 then effects = effects.."&lt;green:&gt;"..foodEffects[token]
+    
+    -- Everything else (e.g. 0)
+    else effects = effects.."&lt;LightBlue:&gt;"..foodEffects[token] end
+    
+ end
+
+cecho("&lt;LightBlue:&gt; "..effects.."&lt;LightBlue:&gt;)")</script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList>
+				<string>^\s*an? (?&lt;traits&gt;.+) (?:strip of bark|leaf|pine cone|seed|fruit|strawberry|pumpkin|flower)(?: lies here.)?(?:\.\.It glows blue)?!?(?:\[\d+\])?$</string>
+			</regexCodeList>
+			<regexCodePropertyList>
+				<integer>1</integer>
+			</regexCodePropertyList>
+		</Trigger>
+	</TriggerPackage>
+	<TimerPackage />
+	<AliasPackage />
+	<ActionPackage />
+	<ScriptPackage>
+		<Script isActive="yes" isFolder="no">
+			<name>Forage Food Effects</name>
+			<packageName></packageName>
+			<script>foodEffects = {}
+foodRating = {}
+
+-- Sample ratings
+-- -3 = Damages gear, persistent negative effects
+-- -2 = Annoying or short-lived negative effects
+-- -1 = Managable negative effects
+--  0 = Neutral effects
+--  1 = Minor positive effects
+--  2 = Beneficial buffs
+--  3 = Best effects
+
+foodEffects["withered"] = "lightning bolt"
+foodRating["withered"]= -3
+
+foodEffects["vibrant"] = "weakness"
+foodRating["vibrant"] = -3
+
+foodEffects["swirly"] = "curse"
+foodRating["swirly"] = -2
+
+foodEffects["smooth"] = "feeblemind"
+foodRating["smooth"] = -3
+
+foodEffects["grainy"] = "paralyze"
+foodRating["grainy"] = -2
+
+foodEffects["healthy"] = "flamestrike"
+foodRating["healthy"] = -3
+
+foodEffects["speckly"] = "poison"
+foodRating["speckly"] = -1
+
+foodEffects["wrinkled"] = "sleep"
+foodRating["wrinkled"] = -2
+
+foodEffects["bumpy"] = "blindness"
+foodRating["bumpy"] = -1
+
+foodEffects["wilted"] = "fear"
+foodRating["wilted"] = 0
+
+foodEffects["translucent"] = "cure critic"
+foodRating["translucent"] = 1
+
+foodEffects["small"] = "sense life"
+foodRating["small"] = 1
+
+foodEffects["big"] = "mass heal"
+foodRating["big"] = 3
+
+foodEffects["yellowish"] = "spirit armor"
+foodRating["yellowish"] = 1
+
+foodEffects["tiny"] = "levitate"
+foodRating["tiny"] = 2
+
+foodEffects["plump"] = "cure light"
+foodRating["plump"] = 1
+
+foodEffects["blue"] = "cure light"
+foodRating["blue"] = 1
+
+foodEffects["azure"] = "bless"
+foodRating["azure"] = 1
+
+foodEffects["huge"] = "sanctuary"
+foodRating["huge"] = 3
+
+foodEffects["medium"] = "travelling"
+foodRating["medium"] = 2
+
+foodEffects["amber"] = "cure blind"
+foodRating["amber"] = 1</script>
+			<eventHandlerList />
+		</Script>
+	</ScriptPackage>
+	<KeyPackage />
+	<VariablePackage>
+		<HiddenVariables />
+	</VariablePackage>
+</MudletPackage>
