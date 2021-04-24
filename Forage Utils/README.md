@@ -1,3 +1,6 @@
+## Installation
+Download .xml and drag/drop directly onto Mudlet main window, or drag [this link](https://github.com/yetanotherkevin/BlackMUDlet/raw/main/Forage%20Utils/Forage%20Utils.xml) directly.
+
 ## Forage Utils
 A set of triggers for forage related events. Includes a simple script to automatically annotate foraged food with its effects.
   - Triggers for each forage state are defined
@@ -16,6 +19,3 @@ a tiny amber swirly fruit lies here. (levitate, cure blind, curse)
 a medium healthy speckly fruit lies here. (travelling, flamestrike, poison)
 a tiny speckly pumpkin lies here.[3] (levitate, poison)
 ```
-
-## Installation
-Download .xml and drag/drop directly onto Mudlet main window, or drag [this link](https://github.com/yetanotherkevin/BlackMUDlet/raw/main/Forage%20Utils/Forage%20Utils.xml) directly.
