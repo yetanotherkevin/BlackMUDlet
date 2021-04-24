@@ -1,7 +1,7 @@
 # BlackMUDlet
 Scripts and utilities for playing [BlackMUD](www.blackmud.com) with [Mudlet](www.mudlet.org).
 
-Individual `.xml` files can be drag and dropped directly into the Mudlet main window to install individually.
+Individual `.xml` files can be dragged and dropped directly into the Mudlet main window to install individually.
 
 ## Character Status Utils
 A set of triggers to scrape and store character status for use in other triggers and scripts.
