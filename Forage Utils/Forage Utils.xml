@@ -147,6 +147,8 @@
 			<script>-- Triggered on both success or fail, but not interruption
 -- Good place for auto food, drink, buff, etc. and re-forage.
 
+-- Example logic for eating and/or drinking if hungry/thirsty
+--[[
 if playerInfo["thirsty"] then
   send("drink water")
   send("drink water")
@@ -154,10 +156,12 @@ if playerInfo["thirsty"] then
 end
 
 -- goodberry pops direct to inventory, so better than mushrooms while foraging
+-- could also eat strawberries, blackberries, nuts, etc.
 if playerInfo["hungry"] then
   send("cast 'goodberry'")
   send("eat berry")
 end
+--]]
 
 send("forage")</script>
 			<triggerType>0</triggerType>
@@ -203,6 +207,8 @@ send("forage")</script>
 			<name>Forage Room Quality</name>
 			<script>-- possible matches are terrible, poor, average, good, and great
 
+-- If you have mapping set up you can automatically annotate your maps with the result
+--[[
 if matches[2] == "terrible" then
   setRoomChar(getPlayerRoom(), "🥜")
 elseif matches[2] == "poor" then
@@ -216,7 +222,7 @@ elseif matches[2] == "great" then
 end
 
 setRoomUserData(getPlayerRoom(), "forageQuality", matches[2])
-</script>
+--]]</script>
 			<triggerType>0</triggerType>
 			<conditonLineDelta>0</conditonLineDelta>
 			<mStayOpen>0</mStayOpen>
