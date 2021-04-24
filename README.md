@@ -1,5 +1,5 @@
 # BlackMUDlet
-Scripts and utilities for playing [BlackMUD](www.blackmud.com) with [Mudlet](www.mudlet.org).
+Scripts and utilities for playing [BlackMUD](http://www.blackmud.com) with [Mudlet](http://www.mudlet.org).
 
 Individual `.xml` files can be dragged and dropped directly into the Mudlet main window to install individually.
 
