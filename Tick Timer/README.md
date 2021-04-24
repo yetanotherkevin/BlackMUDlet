@@ -1,3 +1,6 @@
+## Installation
+Download .xml and drag/drop directly onto Mudlet main window, or drag [this link](https://github.com/yetanotherkevin/BlackMUDlet/raw/main/Tick%20Timer/Tick%20Timer.xml) directly.
+
 ## Tick Timer
 A simple event-based tick timer. Syncs a 60 second Mudlet GUI timer whenever a `newTickEvent` is triggered. 
 
@@ -21,5 +24,4 @@ Your eyes glow silver.
 < 378 220 386 > (58)
 ```
 
-#Installation
-Drag and drop .xml file directly onto Mudlet's main window.
+
