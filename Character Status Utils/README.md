@@ -2,7 +2,7 @@
 Download .xml and drag/drop directly onto Mudlet main window, or drag [this link](https://github.com/yetanotherkevin/BlackMUDlet/raw/main/Character%20Status%20Utils/Character%20Status%20Utils.xml) directly.
 
 ## Character Status Utils
-A set of triggers to scrape and store character status for use in other triggers and scripts.
+A set of triggers to scrape and store character status for use in other triggers and scripts. Will need to send `score`, `level`, and `attributes` commands before things will work correctly.
 
 For example: `if characterStatus["hungry"] then send("eat mushroom") end`
 
