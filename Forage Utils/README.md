@@ -18,4 +18,4 @@ a tiny speckly pumpkin lies here.[3] (levitate, poison)
 ```
 
 ## Installation
-Drag and drop .xml file directly onto Mudlet's main window.
+Download .xml and drag/drop directly onto Mudlet main window, or drag [this link](https://github.com/yetanotherkevin/BlackMUDlet/raw/main/Forage%20Utils/Forage%20Utils.xml) directly.
