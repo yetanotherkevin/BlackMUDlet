@@ -1,3 +1,6 @@
+## Installation
+Download .mpackage and drag/drop directly onto Mudlet main window, or drag [this link](https://github.com/yetanotherkevin/BlackMUDlet/raw/main/Item%20DB%20Lookup/Item%20DB%20Lookup.mpackage) directly.
+
 ## Item DB Lookup
 A simple script that scrapes a text dump of an item database for exact matches. Requires a local text file where each entry is separated by a blank line.
   - An "item description" is any block of text between two blank lines
@@ -25,6 +28,3 @@ Pair of silver armbands - 'armbands silver' (found on Osen) added by fast4you
 
 2 items found matching "silver armbands".
 ```
-
-##Installation
-Drag and drop .mpackage directly onto Mudlet's main window.
