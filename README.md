@@ -22,6 +22,7 @@ Currently tracks the following based on prompt, score, level, attributes, and ot
 The `characterStatus` table stores all relevant information, and can be used to power GUI
 elements such as health bars or info panels.
 
+Example:
 ```
 lua display(characterStatus)
 {
@@ -50,6 +51,7 @@ A simple event-based tick timer. Syncs a 60 second Mudlet GUI timer whenever a `
   - Configurable warning behavior in onTickWarning() including delay
   - Includes a trigger to show the current tick timer value beside the prompt
 
+Example:
 ```
 < 378 239 382 > (27)
 
@@ -76,6 +78,7 @@ A set of triggers for forage related events. Includes a simple script to automat
   - Some forage messages are highlighted in relevant colors
   - A translation table and ratings table are defined
 
+Example:
 ```
 a medium blue bumpy pumpkin lies here. (travelling, cure light, blindness)
 a tiny swirly pumpkin lies here.[2] (levitate, curse)
@@ -97,6 +100,9 @@ A simple script that scrapes a text dump of an item database for exact matches. 
   - Only returns exact matches, so "/item dragon-shield" probably won't work as it would in game
   - The same function could be used on textfiles containing non-item information, as long as each entry is separated with a blank line
 
+**Use the .mpackage to install to ensure itemdb.txt ends up in the correct location.**
+
+Example:
 ```
 /item silver armbands
 
